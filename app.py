@@ -4,15 +4,11 @@ from groq import Groq
 import streamlit as st
 
 # Load your dataset
-dataset_path = 'Hydra-Movie-Scrape.csv'  # Make sure this file is in the same directory
+dataset_path = 'Hydra-Movie-Scrape.csv'  # Ensure this file is in the same directory
 data = pd.read_csv(dataset_path)
 
 # Initialize the Groq client with your API key
-api_key = os.getenv("GROQ_API_KEY")  # Ensure you set this environment variable
-if not api_key:
-    st.error("API key is missing. Please set the GROQ_API_KEY environment variable.")
-    st.stop()
-
+api_key = "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"  # Directly included API key
 client = Groq(api_key=api_key)
 
 def retrieve_information(query):
