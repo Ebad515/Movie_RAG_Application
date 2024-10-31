@@ -4,8 +4,9 @@ from groq import Groq
 import streamlit as st
 
 # Load your dataset
-dataset_path = '/content/Hydra-Movie-Scrape.csv'  # Update this path
+dataset_path = 'path/to/your/Hydra-Movie-Scrape.csv'  # Update this path
 data = pd.read_csv(dataset_path)
+
 
 # Initialize the Groq client with your API key
 api_key = "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"  # Your API key here
